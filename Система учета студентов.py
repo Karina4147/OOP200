@@ -59,7 +59,7 @@ class Student:
         else:
             self.courses = courses
         if grades is None:
-            self.grades = []
+            self.grades = {}
         else:
             self.grades = grades
 
@@ -78,6 +78,7 @@ class Student:
         :param course_name: название курса
         :param grade: оценка
         """
+
         if course_name in self.courses:
             self.grades[course_name] = grade
         else:
